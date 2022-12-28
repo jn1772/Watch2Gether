@@ -1,0 +1,20 @@
+{
+    "name": "Watch 2 Gether :)",
+    "version": "1.0.0",
+    "description": "Watch videos with your friends!",
+    "manifest_version": 3,
+    "author": "Divine Hero",
+    "action":{
+        "default_popup": "base.html",
+        "default_title": "Watch 2 Gether Home"
+    },
+    "content_scripts": [
+        {
+          "js": ["content.js"],
+          "css": ["content.css"],
+          "matches": ["https://*.youtube.com/*"],
+          "run_at": "document_end"
+        }
+      ],
+    "permissions": ["tabs","activeTab"]
+}
